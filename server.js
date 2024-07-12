@@ -17,11 +17,6 @@ app.get("/contact", (req, res) => {
     res.render('contact');
 });
 
-app.get("/my_portfolio", (req, res) => {
-    // Render page 
-    res.render('my_portfolio"');
-});
-
 app.listen(port, function (error) {
     if (error)
         throw error;
