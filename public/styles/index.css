@@ -1,0 +1,139 @@
+/*-------------nav-bar------------------*/
+.menu {
+    background-color: #BB9AB1;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+  }
+  
+  .menu li a:hover {
+    background-color: #987D9A;
+  }
+/*-------------home page------------------*/
+
+  body {
+    background-color: #EEEDEB;
+    color: #333; 
+    font-family: 'Lato', serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  section {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #333;
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #333;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .about {
+    width: 60%;
+    padding: 10px;
+    background-color: #ffffff4e;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #BB9AB1(0, 0, 0, 0.1);
+    text-align: justify;
+    margin: 0 auto;
+    line-height: 1.5; 
+    margin-bottom: 10px;
+  }
+
+  .name {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .profile-pic {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+  }
+
+  .experience, .certifications {
+    width: 60%;
+    padding: 10px;
+    background-color: #ffffff4e;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #BB9AB1(0, 0, 0, 0.1);
+    text-align: justify;
+    margin: 0 auto;
+    line-height: 1.5; 
+    margin-bottom: 10px;
+  }
+
+  /*-------------footer------------------*/
+
+  .footer {
+    background-color: #BB9AB1;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  .social-media li {
+    margin: 0 10px;
+  }
+
+  .social-media a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .social-media .social-icons {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }

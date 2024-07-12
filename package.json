@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "portfolio project for Intro to Programming course with Code the Dream",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
