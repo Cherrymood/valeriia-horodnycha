@@ -12,9 +12,9 @@ app.get("/", (req, res) => {
     res.render('home');
 });
 
-app.get("/contact", (req, res) => {
+app.get("/Api", (req, res) => {
     // Render page 
-    res.render('contact');
+    res.render('fun');
 });
 
 app.listen(port, function (error) {
