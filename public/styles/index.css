@@ -166,3 +166,32 @@
     height: 24px;
     fill: currentColor;
   }
+  /*-------------Media Queries for Desktop------------------*/
+
+@media (min-width: 1024px) {
+  /* Nav-bar adjustments for desktop */
+  .menu li a {
+      padding: 25px 30px;
+      font-size: 1.4em;
+  }
+
+  /* Home page adjustments for desktop */
+  h1 {
+      font-size: 3.5em;
+  }
+
+  .name {
+      font-size: 1.8em;
+      margin-top: 40px;
+  }
+
+  .profile-pic {
+      width: 250px;
+      height: 250px;
+  }
+
+  /* Footer adjustments for desktop */
+  .footer {
+      padding: 40px 0;
+  }
+}
