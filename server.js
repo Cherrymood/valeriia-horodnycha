@@ -1,26 +1,25 @@
-import express from "express";
+import express from 'express';
+import bodyParser from 'body-parser';
+
+let message = [];
 
 const app = express();
 const port = 3000;
 
-app.use(express.urlencoded({extended: true}));
-app.use(express.static("./public"));
-app.set('view engine', 'ejs');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
-app.get("/", (req, res) => {
-    // Render page 
-    res.render('home');
+app.post('/submit-form', (req, res) => {
+    const { name, email, phone, message } = req.body;
+
+    console.log(`Name: ${name}, Email: ${email}, Phone: ${phone}, Message: ${message}`);
+
+    message.push({ name, email, phone, message });
+    
+    res.json({ message: 'Form submitted successfully!' });
 });
 
-app.get("/Api", (req, res) => {
-    // Render page 
-    res.render('fun');
-});
-
-app.listen(port, function (error) {
-   
-    if (error)
-        throw error;
-    else
-        console.log(`Server is running on ${port}`);
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
 });

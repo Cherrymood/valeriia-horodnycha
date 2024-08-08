@@ -1,241 +1,311 @@
 /*-------------nav-bar------------------*/
 .menu {
-    background-color: #BB9AB1;
-    padding: 5px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 2000;
-  }
-  
-  .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  
-  .menu li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    float: left;
-  }
-  
-  .menu li a:hover {
-    background-color: #987D9A;
-  }
+  background-color: #BB9AB1;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2000;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: left;
+}
+
+.menu li a:hover {
+  background-color: #987D9A;
+}
+
 /*-------------home page------------------*/
+body {
+  background-color: #EEEDEB;
+  color: #333; 
+  font-family: 'Lato', serif;
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    background-color: #EEEDEB;
-    color: #333; 
-    font-family: 'Lato', serif;
-    margin: 0;
-    padding: 0;
-  }
+#skillsList{
+  background-color: #f9f9f9;
+}
 
-  section {
-    margin: 10px;
-    padding: 10px;
-  }
+#photo {
+  margin-top: 10px;
+  padding-top: 30px;
+}
 
-  h1 {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #333;
-  }
+section {
+  margin: 10px;
+  padding: 10px;
+}
 
-  h2 {
-    font-size: 2em;
-    font-weight: 700;
-    color: #333;
-  }
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #333;
+}
 
-  h3 {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #333;
-  }
+h2 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #333;
+}
 
-  .name {
+h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333;
+}
+
+.name {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-pic {
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-top: 60px;
+}
+
+#about, #experience, #certifications, #projects, #skills, #contact {
+  list-style: none;
+  width: 60%;
+  padding: 10px;
+  background-color: #ffffff4e;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  margin: 0 auto;
+  line-height: 1.5; 
+  margin-bottom: 10px;
+}
+
+/*---------connect-form-------*/
+.contact-form-container {
+  background-color: #ffffff4e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.contact-form-container h2 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  display: none;
+}
+
+.submit-button {
+  background-color: #987D9A;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+/*-------------table------------------*/
+table {
+  width: 100%; 
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.row {
+  display: flex; 
+  width: 100%;
+}
+
+.row td {
+  padding: 10px;
+  flex: 1;
+}
+
+.col1 {
+  text-align: left;
+  flex: 1; 
+}
+
+.col2 {
+  text-align: right;
+  flex: 1;
+}
+
+/*-------------footer------------------*/
+#footer {
+  background-color: #BB9AB1;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-media {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.social-media li {
+  margin: 0 10px;
+}
+
+.social-media a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-media .social-icons {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/*-------------Media Queries for Desktop------------------*/
+@media (min-width: 1024px) {
+/* Nav-bar adjustments for desktop */
+.menu li a {
+    padding: 25px 30px;
     font-size: 1.4em;
-    font-weight: 700;
-    color: #333;
-    letter-spacing: 2px;
-    text-align: center;
-    margin-top: 20px;
-  }
+}
 
-  .profile-pic {
-    display: block;
-    margin: 0 auto 20px;
-    border-radius: 50%;
+/* Home page adjustments for desktop */
+h1 {
+    font-size: 3.5em;
+}
+
+.name {
+    font-size: 1.8em;
+    margin-top: 40px;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+}
+
+/* Footer adjustments for desktop */
+.footer {
+    padding: 40px 0;
+}
+}
+
+/*-------------Media Queries for Tablet------------------*/
+@media (min-width: 768px) {
+/* Nav-bar adjustments for tablet */
+.menu li a {
+    padding: 20px 24px;
+    font-size: 1.2em;
+}
+
+/* Home page adjustments for tablet */
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.name {
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+
+.profile-pic {
     width: 150px;
     height: 150px;
-    margin-top: 60px;
-  }
-
-  #about, #experience, #certifications, #projects, #skills {
-    list-style: none;
-    width: 60%;
-    padding: 10px;
-    background-color: #ffffff4e;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #BB9AB1(0, 0, 0, 0.1);
-    text-align: justify;
-    margin: 0 auto;
-    line-height: 1.5; 
-    margin-bottom: 10px;
-  }
-
-  /*-------------table------------------*/
-
-  table {
-    width: 100%; 
-    border-collapse: collapse;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .row {
-    display: flex; 
-    width: 100%;
-  }
-  
-  .row td {
-    padding: 10px;
-    flex: 1;
-  }
-  
-  .col1 {
-    text-align: left;
-    flex: 1; 
-  }
-  
-  .col2 {
-    text-align: right;
-    flex: 1;
-  }
-  
-  /*-------------footer------------------*/
-
-  .footer {
-    background-color: #BB9AB1;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .social-media {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-
-  .social-media li {
-    margin: 0 10px;
-  }
-
-  .social-media a {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .social-media .social-icons {
-    width: 24px;
-    height: 24px;
-    fill: currentColor;
-  }
-  /*-------------Media Queries for Desktop------------------*/
-
-@media (min-width: 1024px) {
-  /* Nav-bar adjustments for desktop */
-  .menu li a {
-      padding: 25px 30px;
-      font-size: 1.4em;
-  }
-
-  /* Home page adjustments for desktop */
-  h1 {
-      font-size: 3.5em;
-  }
-
-  .name {
-      font-size: 1.8em;
-      margin-top: 40px;
-  }
-
-  .profile-pic {
-      width: 250px;
-      height: 250px;
-  }
-
-  /* Footer adjustments for desktop */
-  .footer {
-      padding: 40px 0;
-  }
+    margin-top: 40px;
 }
-/*-------------Media Queries for Tablet------------------*/
 
-@media (min-width: 768px) {
-  /* Nav-bar adjustments for tablet */
-  .menu li a {
-      padding: 20px 24px;
-      font-size: 1.2em;
-  }
+#about, #experience, #certifications, #projects, #skills, #contact {
+    width: 70%;
+    padding: 15px;
+}
 
-  /* Home page adjustments for tablet */
-  h1 {
-      font-size: 2.5em;
-  }
-
-  h2 {
-      font-size: 2em;
-  }
-
-  h3 {
-      font-size: 1.5em;
-  }
-
-  .name {
-      font-size: 1.4em;
-      letter-spacing: 2px;
-      margin-top: 30px;
-  }
-
-  .profile-pic {
-      width: 150px;
-      height: 150px;
-      margin-top: 40px;
-  }
-
-  #about, #experience, #certifications, #projects, #skills {
-      width: 70%;
-      padding: 15px;
-  }
-
-  /* Footer adjustments for tablet */
-  .footer {
-      padding: 20px 0;
-  }
+/* Footer adjustments for tablet */
+.footer {
+    padding: 20px 0;
+}
 }
