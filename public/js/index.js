@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
   footerContentDiv.className = 'footer-content';
 
   var copyright = document.createElement('p');
+  copyright.className = 'copyright';
   copyright.innerHTML = `©${thisYear}`;
 
   var socialMediaList = document.createElement('ul');
@@ -36,50 +37,24 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /*----------Connect Form ------*/
-document.getElementById('contactForm').addEventListener('submit', function (event) {
-  event.preventDefault();
+const form = document.getElementById('contactForm');
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
 
-  const errorElements = document.querySelectorAll('.error-message');
-  errorElements.forEach(el => el.style.display = 'none');
+            const response = await fetch('/submit-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
 
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  let isValid = true;
-
-  if (name === '') {
-      document.getElementById('nameError').textContent = 'Name is required';
-      document.getElementById('nameError').style.display = 'block';
-      isValid = false;
-  }
-
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (email === '' || !emailPattern.test(email)) {
-      document.getElementById('emailError').textContent = 'Valid email is required';
-      document.getElementById('emailError').style.display = 'block';
-      isValid = false;
-  }
-
-  const phonePattern = /^[0-9]{10}$/;
-  if (phone === '' || !phonePattern.test(phone)) {
-      document.getElementById('phoneError').textContent = 'Valid phone number is required';
-      document.getElementById('phoneError').style.display = 'block';
-      isValid = false;
-  }
-
-  if (message === '') {
-      document.getElementById('messageError').textContent = 'Message is required';
-      document.getElementById('messageError').style.display = 'block';
-      isValid = false;
-  }
-
-  if (isValid) {
-      alert('Form submitted successfully!');
-  }
-});
-
+            const result = await response.json();
+            alert(result.message);
+        });
 /*-----------Skills---------*/
 
 var skills = [
@@ -99,12 +74,14 @@ skillsList.setAttribute('id', 'skillsList');
 for (var i = 0; i < skills.length; i++) {
 
   var categoryItem = document.createElement('li');
+  categoryItem.className = 'group';
   categoryItem.innerText = skills[i].category;
 
   var techList = document.createElement('ul');
   
   for (var j = 0; j < skills[i].technologies.length; j++) {
     var techItem = document.createElement('li');
+    techItem.className = 'skills-item';
     techItem.innerText = skills[i].technologies[j];
     techList.appendChild(techItem);
   }

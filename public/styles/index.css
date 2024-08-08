@@ -1,6 +1,5 @@
 /*-------------nav-bar------------------*/
 .menu {
-  background-color: #BB9AB1;
   padding: 0;
   position: fixed;
   width: 100%;
@@ -12,12 +11,14 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
   overflow: hidden;
 }
 
 .menu li a {
   display: block;
-  color: white;
+  color: #BB9AB1;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -26,6 +27,7 @@
 
 .menu li a:hover {
   background-color: #987D9A;
+  color: #EEEDEB;
 }
 
 /*-------------home page------------------*/
@@ -35,6 +37,12 @@ body {
   font-family: 'Lato', serif;
   margin: 0;
   padding: 0;
+}
+
+#about-p{
+  background-color: #f9f9f9;
+  margin: 10px;
+  padding: 10px;
 }
 
 #skillsList{
@@ -76,6 +84,16 @@ h3 {
   letter-spacing: 2px;
   text-align: center;
   margin-top: 20px;
+}
+
+.group {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.skills-item{
+  font-weight:normal;
+  text-decoration: none;
 }
 
 .profile-pic {
@@ -199,10 +217,8 @@ table {
 
 /*-------------footer------------------*/
 #footer {
-  background-color: #BB9AB1;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
+  color: #BB9AB1;
+  padding: 0;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -210,9 +226,14 @@ table {
 
 .footer-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  gap: 800px; /* Space out the copyright and social media sections */
+  align-items: center; /* Vertically center the content */
+  padding: 10px 20px; /* Add some padding for better spacing */
+}
+
+.copyright {
+  display: flex;
+  align-items: center; /* Vertically centers the text */
 }
 
 .social-media {
@@ -220,21 +241,39 @@ table {
   padding: 0;
   margin: 0;
   display: flex;
+  align-items: center; /* Centers items vertically within the container */
 }
 
 .social-media li {
   margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-media a {
-  color: #fff;
+  color: #BB9AB1;
   text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #987D9A; 
+  transform: scale(2);
 }
 
 .social-media .social-icons {
   width: 24px;
   height: 24px;
   fill: currentColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+}
+
+.social-media .social-icons:hover {
+  transform: rotate(20deg) scale(1.2); /* Fun rotate and scale effect on hover */
 }
 
 /*-------------Media Queries for Desktop------------------*/
