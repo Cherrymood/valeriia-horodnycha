@@ -1,48 +1,38 @@
 document.addEventListener("DOMContentLoaded", function() {
+  var today = new Date();
+  var thisYear = today.getFullYear();
+  var footer = document.querySelector('footer');
 
-    var today = new Date();
-    
-    var thisYear = today.getFullYear();
-    
-    var footer = document.querySelector('footer');
-    
-    var copyright = document.createElement('p');
-    
-    copyright.innerHTML = `©Valeriia ${thisYear}`;
-    
-    footer.appendChild(copyright);
+  var footerContentDiv = document.createElement('div');
+  footerContentDiv.className = 'footer-content';
 
-    var footerContentDiv = document.createElement('div');
-    footerContentDiv.className = 'footer-content';
+  var copyright = document.createElement('p');
+  copyright.innerHTML = `©${thisYear}`;
 
-    var socialMediaList = document.createElement('ul');
-    socialMediaList.className = 'social-media';
+  var socialMediaList = document.createElement('ul');
+  socialMediaList.className = 'social-media';
 
-    var linkedinItem = document.createElement('li');
-    var linkedinLink = document.createElement('a');
-    linkedinLink.href = 'https://www.linkedin.com/in/cherrymood';
-    linkedinLink.innerHTML = `
-      <svg class="social-icons" xmlns="http://www.w3.org/2000/svg">
-        <path d="M22.23 0H1.77C.79 0 0 .78 0 1.75v20.5C0 23.22.79 24 1.77 24h20.46c.98 0 1.77-.78 1.77-1.75V1.75C24 .78 23.21 0 22.23 0zM7.12 20.45H3.56V9.02h3.56v11.43zM5.34 7.58c-1.13 0-2.05-.92-2.05-2.05s.92-2.05 2.05-2.05 2.05.92 2.05 2.05-.92 2.05-2.05 2.05zm15.1 12.87h-3.55v-5.8c0-1.38-.03-3.16-1.93-3.16-1.93 0-2.23 1.51-2.23 3.05v5.91H9.22V9.02h3.41v1.56h.05c.47-.9 1.61-1.85 3.31-1.85 3.54 0 4.19 2.33 4.19 5.37v6.35z"/>
-      </svg>
-    `;
-    linkedinItem.appendChild(linkedinLink);
+  var linkedinItem = document.createElement('li');
+  linkedinItem.innerHTML = `<a href="https://www.linkedin.com/in/cherrymood">
+    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+      <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
+    </svg>
+  </a>`;
+  
+  var githubItem = document.createElement('li');
+  githubItem.innerHTML = `<a href="https://github.com/Cherrymood">
+    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+      <path fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd"/>
+      <path d="M7.2 8.809H4V19.5h3.2V8.809Z"/>
+    </svg>
+  </a>`;
 
-    var githubItem = document.createElement('li');
-    var githubLink = document.createElement('a');
-    githubLink.href = 'https://github.com/Cherrymood';
-    githubLink.innerHTML = `
-      <svg class="social-icons" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.45.55.38A8.003 8.003 0 0016 8c0-4.42-3.58-8-8-8z"/>
-      </svg>
-    `;
-    githubItem.appendChild(githubLink);
+  socialMediaList.appendChild(linkedinItem);
+  socialMediaList.appendChild(githubItem);
 
-    socialMediaList.appendChild(linkedinItem);
-    socialMediaList.appendChild(githubItem);
-
-    footerContentDiv.appendChild(socialMediaList);
-    footer.appendChild(footerContentDiv);
+  footerContentDiv.appendChild(copyright);
+  footerContentDiv.appendChild(socialMediaList);
+  footer.appendChild(footerContentDiv);
 });
 
 /*----------Connect Form ------*/
@@ -104,6 +94,7 @@ var skills = [
 
 var skillsSection = document.getElementById('skills');
 var skillsList = skillsSection.querySelector('ul');
+skillsList.setAttribute('id', 'skillsList');
 
 for (var i = 0; i < skills.length; i++) {
 
