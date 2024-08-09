@@ -140,6 +140,33 @@ h3 {
   text-decoration: none;
 }
 
+/*----------Skills---------------*/
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill-category {
+  background-color: #ffffff4e;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category h3 {
+  font-size: 1.5em;
+  color: #BB9AB1;
+  margin-bottom: 10px;
+}
+
+.skills-item {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
 #about, #experience, #certifications, #projects, #skills {
   list-style: none;
   width: 60%;
@@ -159,6 +186,93 @@ h3 {
   line-height: 1.5; 
 }
 
+/*-------------projects------------------*/
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column size as needed */
+  gap: 20px;
+}
+
+.repo-card {
+  position: relative; 
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.repo-name {
+  font-size: 1.5em; 
+  font-weight: bold;
+  color: #BB9AB1;
+  text-decoration: none;
+}
+
+.repo-name:hover {
+  text-decoration: underline;
+  color: #987D9A;
+}
+
+.repo-description {
+  margin: 10px 0;
+  color: #333;
+}
+
+.repo-date {
+  position: absolute;
+  font-weight: bold;
+  bottom: 10px; 
+  right: 10px; 
+  font-size: 0.9em;
+  color: #555;
+}
+
+/*-------------certificates------------------*/
+
+.certifications-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 8px;
+}
+
+.certification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.certification-item:last-child {
+  border-bottom: none;
+}
+
+.certification-category {
+  font-weight: normal;
+  color: #333;
+  font-size: 0.6em;
+}
+
+.certification-details {
+  color: #BB9AB1;
+  font-size:  0.6em;
+}
+
+.certification-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit; 
+}
+
+.certification-link:hover {
+  text-decoration: none;
+  color: #987D9A;
+}
+
 /*-------------Footer------------------*/
 #footer {
   color: #BB9AB1;
@@ -171,10 +285,10 @@ h3 {
 .footer-content {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center content horizontally */
+  justify-content: center; 
   padding: 10px 20px; 
-  gap: 50px; /* Add space between social media and any other content */
-  flex-wrap: wrap; /* Allows wrapping in case of smaller screens */
+  gap: 50px;
+  flex-wrap: wrap; 
 }
 
 .social-media {
@@ -183,11 +297,11 @@ h3 {
   margin: 0;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center social media icons horizontally */
+  justify-content: center; 
 }
 
 .social-media li {
-  margin: 0 15px; /* Increase spacing between icons for better visual appeal */
+  margin: 0 15px;
 }
 
 .social-media a {
@@ -198,8 +312,8 @@ h3 {
 
 .social-media a:hover {
   color: #987D9A; 
-  transform: rotate(360deg) scale(1.5); /* Fun hover effect: rotate and scale */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  transform: rotate(360deg) scale(1.5); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .social-media .social-icons {
