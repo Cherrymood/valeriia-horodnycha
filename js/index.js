@@ -36,27 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
   footer.appendChild(footerContentDiv);
 });
 
-/*----------Connect Form ------*/
-
-const form = document.getElementById('contactForm');
-
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
-
-            const response = await fetch('/submit-form', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-
-            const result = await response.json();
-            alert(result.message);
-        });
 /*-----------Skills---------*/
 
 var skills = [
