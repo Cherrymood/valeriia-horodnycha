@@ -1,0 +1,270 @@
+/*-------------Global Styles------------------*/
+body {
+  background-color: #EEEDEB;
+  color: #333; 
+  font-family: 'Lato', serif;
+}
+
+/*-------------Nav-Bar------------------*/
+.menu {
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2000;
+  background-color: #EEEDEB; /* Ensure the background covers the menu area */
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menu li a {
+  display: block;
+  color: #BB9AB1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #987D9A;
+  color: #EEEDEB;
+}
+
+.menu .icon {
+  display: none;
+  color: #BB9AB1;
+  font-size: 24px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/*-------------Home Page------------------*/
+#photo {
+  margin-top: 10px;
+  padding-top: 30px;
+}
+
+#icons {
+  vertical-align: middle; 
+  margin-right: 8px; 
+  margin-left: 8px;
+  margin-bottom: 8px;
+  width: 30px; 
+  height: auto; 
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #BB9AB1;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #BB9AB1;
+  background-color: #f9f9f9;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.name {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+.profile-pic {
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-top: 60px;
+}
+.group {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.skills-item {
+  font-weight: normal;
+  text-decoration: none;
+}
+
+#about, #experience, #certifications, #projects, #skills {
+  list-style: none;
+  width: 60%;
+  background-color: #ffffff4e;
+  text-align: justify;
+  margin: 0 auto;
+  line-height: 1.5; 
+}
+
+#contact {
+
+  list-style: none;
+  width: 60%;
+  text-align: justify;
+  margin: 0 auto;
+  margin-top: 200px;
+  line-height: 1.5; 
+}
+
+/*-------------Connect Form------------------*/
+.contact-form-container {
+  background-color: #ffffff4e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.contact-form-container h2 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  display: none;
+}
+
+.submit-button {
+  background-color: #987D9A;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+/*-------------Table------------------*/
+table {
+  width: 100%; 
+  border-collapse: collapse;
+  position: relative;
+}
+
+.row {
+  display: flex; 
+  width: 100%;
+}
+
+.row td {
+  padding: 10px;
+  flex: 1;
+}
+
+.col1 {
+  text-align: left;
+  flex: 1; 
+}
+
+.col2 {
+  text-align: right;
+  flex: 1;
+}
+
+/*-------------Footer------------------*/
+#footer {
+  color: #BB9AB1;
+  padding: 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  padding: 10px 20px; 
+  gap: 50px; /* Add space between social media and any other content */
+  flex-wrap: wrap; /* Allows wrapping in case of smaller screens */
+}
+
+.social-media {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center social media icons horizontally */
+}
+
+.social-media li {
+  margin: 0 15px; /* Increase spacing between icons for better visual appeal */
+}
+
+.social-media a {
+  color: #BB9AB1;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #987D9A; 
+  transform: rotate(360deg) scale(1.5); /* Fun hover effect: rotate and scale */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.social-media .social-icons {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.social-media .social-icons:hover {
+  transform: rotate(20deg) scale(1.2); 
+}
