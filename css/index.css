@@ -81,6 +81,15 @@ h3 {
   background-color: #f9f9f9;
 }
 
+a:any-link {
+  color: #BB9AB1;
+  text-decoration-line: none;
+}
+
+a:any-link:hover {
+  text-decoration-line: underline;
+  color: #987D9A; }
+
 .name {
   font-size: 1.4em;
   font-weight: 700;
@@ -228,23 +237,34 @@ h3 {
   color: #555;
 }
 
-/*-------------certificates------------------*/
-
+/*-------------certifications------------------*/
 .certifications-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 8px;
+}
+
+.certification-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .certification-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
   border-bottom: 1px solid #ddd;
+}
+
+.certification-item h3 {
+  font-size: 1.2em; 
+  font-weight: bold;
+  background-color: #ffffff4e;
+  color: #BB9AB1;
+  text-decoration: none;
+  margin: 0; 
+  padding: 0; 
 }
 
 .certification-item:last-child {
@@ -252,25 +272,25 @@ h3 {
 }
 
 .certification-category {
-  font-weight: normal;
-  color: #333;
+  font-weight: bold;
   font-size: 0.6em;
-}
-
-.certification-details {
   color: #BB9AB1;
-  font-size:  0.6em;
 }
 
 .certification-link {
-  font-weight: bold;
+  font-weight: normal;
+  font-size: 0.6em;
   text-decoration: none;
-  color: inherit; 
 }
 
 .certification-link:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: #987D9A;
+}
+
+.certification-details {
+  color: #555;
+  font-size: 0.9em;
 }
 
 /*-------------Footer------------------*/
