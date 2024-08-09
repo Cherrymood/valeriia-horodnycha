@@ -5,15 +5,6 @@ body {
   font-family: 'Lato', serif;
 }
 
-/*-------------Nav-Bar------------------*/
-.menu {
-  padding: 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 2000;
-}
-
 .group {
   font-weight: bold;
   text-decoration: none;
@@ -22,6 +13,16 @@ body {
 .skills-item {
   font-weight: normal;
   text-decoration: none;
+}
+
+/*-------------Nav-Bar------------------*/
+.menu {
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2000;
+  background-color: #EEEDEB; /* Ensure the background covers the menu area */
 }
 
 .menu ul {
@@ -44,6 +45,15 @@ body {
 .menu li a:hover {
   background-color: #987D9A;
   color: #EEEDEB;
+}
+
+.menu .icon {
+  display: none;
+  color: #BB9AB1;
+  font-size: 24px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 /*-------------Home Page------------------*/
@@ -333,6 +343,7 @@ h3 {
 }
 #contact {
   width: 80%;
+  margin-left: 35px;
 }
 
 .footer-content {
@@ -345,19 +356,20 @@ h3 {
 
 .menu ul {
   flex-direction: column;
-  display: none;
+  width: 100%;
+  display: none; /* Initially hide the menu */
+}
+
+.menu li {
+  text-align: center;
+  width: 100%;
 }
 
 .menu .icon {
   display: block;
-  color: #BB9AB1;
-  font-size: 24px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
 }
 
-#myLinks {
-  display: block;
+.menu ul.active {
+  display: flex; /* Show menu when active */
 }
 }
