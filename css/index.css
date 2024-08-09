@@ -305,15 +305,6 @@ h3 {
 /*-------------Media Queries for Mobile------------------*/
 @media (max-width: 767px) {
 
-.menu ul {
-    align-items: center;
-}
-
-.menu li a {
-    padding: 10px 15px;
-    font-size: 1em;
-}
-
 h1 {
     font-size: 2em;
 }
@@ -342,7 +333,6 @@ h3 {
 }
 #contact {
   width: 80%;
-  margin-left: 35px;
 }
 
 .footer-content {
@@ -353,4 +343,21 @@ h3 {
   margin: 10px 0;
 }
 
+.menu ul {
+  flex-direction: column;
+  display: none;
+}
+
+.menu .icon {
+  display: block;
+  color: #BB9AB1;
+  font-size: 24px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#myLinks {
+  display: block;
+}
 }
