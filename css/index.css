@@ -81,6 +81,15 @@ h3 {
   background-color: #f9f9f9;
 }
 
+a:any-link {
+  color: #BB9AB1;
+  text-decoration-line: none;
+}
+
+a:any-link:hover {
+  text-decoration-line: underline;
+  color: #987D9A; }
+
 .name {
   font-size: 1.4em;
   font-weight: 700;
@@ -96,6 +105,40 @@ h3 {
   height: 150px;
   margin-top: 60px;
 }
+
+/*-------------experience------------------*/
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+}
+
+.experience-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.experience-title {
+  font-weight: normal;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.experience-date {
+  color: #BB9AB1;
+  font-size: 1em;
+}
+
 .group {
   font-weight: bold;
   text-decoration: none;
@@ -104,6 +147,33 @@ h3 {
 .skills-item {
   font-weight: normal;
   text-decoration: none;
+}
+
+/*----------Skills---------------*/
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill-category {
+  background-color: #ffffff4e;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category h3 {
+  font-size: 1.5em;
+  color: #BB9AB1;
+  margin-bottom: 10px;
+}
+
+.skills-item {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 #about, #experience, #certifications, #projects, #skills {
@@ -125,94 +195,102 @@ h3 {
   line-height: 1.5; 
 }
 
-/*-------------Connect Form------------------*/
-.contact-form-container {
-  background-color: #ffffff4e;
-  padding: 20px;
+/*-------------projects------------------*/
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column size as needed */
+  gap: 20px;
+}
+
+.repo-card {
+  position: relative; 
+  background-color: #f9f9f9;
+  padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 600px;
-  width: 100%;
-  margin: 20px auto;
-}
-
-.contact-form-container h2 {
-  margin-top: 0;
-  color: #333;
-  text-align: center;
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  color: #333;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  font-size: 1rem;
 }
 
-textarea {
-  resize: vertical;
+.repo-name {
+  font-size: 1.5em; 
+  font-weight: bold;
+  color: #BB9AB1;
+  text-decoration: none;
 }
 
-.error-message {
-  color: red;
-  font-size: 0.875rem;
-  display: none;
+.repo-name:hover {
+  text-decoration: underline;
+  color: #987D9A;
 }
 
-.submit-button {
-  background-color: #987D9A;
-  color: white;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  width: 100%;
-  transition: background-color 0.3s;
+.repo-description {
+  margin: 10px 0;
+  color: #333;
 }
 
-.submit-button:hover {
-  background-color: #218838;
+.repo-date {
+  position: absolute;
+  font-weight: bold;
+  bottom: 10px; 
+  right: 10px; 
+  font-size: 0.9em;
+  color: #555;
 }
 
-/*-------------Table------------------*/
-table {
-  width: 100%; 
-  border-collapse: collapse;
-  position: relative;
+/*-------------certifications------------------*/
+.certifications-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
 }
 
-.row {
-  display: flex; 
-  width: 100%;
+.certification-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.row td {
-  padding: 10px;
-  flex: 1;
+.certification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
 }
 
-.col1 {
-  text-align: left;
-  flex: 1; 
+.certification-item h3 {
+  font-size: 1.2em; 
+  font-weight: bold;
+  background-color: #ffffff4e;
+  color: #BB9AB1;
+  text-decoration: none;
+  margin: 0; 
+  padding: 0; 
 }
 
-.col2 {
-  text-align: right;
-  flex: 1;
+.certification-item:last-child {
+  border-bottom: none;
+}
+
+.certification-category {
+  font-weight: bold;
+  font-size: 0.6em;
+  color: #BB9AB1;
+}
+
+.certification-link {
+  font-weight: normal;
+  font-size: 0.6em;
+  text-decoration: none;
+}
+
+.certification-link:hover {
+  text-decoration: underline;
+  color: #987D9A;
+}
+
+.certification-details {
+  color: #555;
+  font-size: 0.9em;
 }
 
 /*-------------Footer------------------*/
@@ -227,10 +305,10 @@ table {
 .footer-content {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center content horizontally */
+  justify-content: center; 
   padding: 10px 20px; 
-  gap: 50px; /* Add space between social media and any other content */
-  flex-wrap: wrap; /* Allows wrapping in case of smaller screens */
+  gap: 50px;
+  flex-wrap: wrap; 
 }
 
 .social-media {
@@ -239,11 +317,11 @@ table {
   margin: 0;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center social media icons horizontally */
+  justify-content: center; 
 }
 
 .social-media li {
-  margin: 0 15px; /* Increase spacing between icons for better visual appeal */
+  margin: 0 15px;
 }
 
 .social-media a {
@@ -254,8 +332,8 @@ table {
 
 .social-media a:hover {
   color: #987D9A; 
-  transform: rotate(360deg) scale(1.5); /* Fun hover effect: rotate and scale */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  transform: rotate(360deg) scale(1.5); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .social-media .social-icons {

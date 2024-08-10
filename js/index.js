@@ -36,62 +36,40 @@ document.addEventListener("DOMContentLoaded", function() {
   footer.appendChild(footerContentDiv);
 });
 
-/*----------Connect Form ------*/
-
-const form = document.getElementById('contactForm');
-
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
-
-            const response = await fetch('/submit-form', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-
-            const result = await response.json();
-            alert(result.message);
-        });
 /*-----------Skills---------*/
 
+// Array of skills with categories and technologies
 var skills = [
-  { category: "IDE Software", technologies: ["VS Code"] },
-  { category: "Programming Languages", technologies: ["C#", "Python"] },
-  { category: "Platforms", technologies: ["Microsoft Azure", "GitHub"] },
-  { category: "Frameworks", technologies: ["Angular", ".NET Core", ".Net", "ReactJS"] },
-  { category: "Database", technologies: ["SQL Server"] },
-  { category: "Control Systems", technologies: ["Git"] },
-  { category: "Web Technologies", technologies: ["JavaScript", "TypeScript", "HTML/HTML5", "XHTML", "CSS3/SASS", "jQuery", "Bootstrap", "JSON"] }
+  { category: "Programming Languages", technologies: ["C#", "Python", "JavaScript"] },
+  { category: "Database", technologies: ["MySQL", "PostgreSQL"] },
+  { category: "Frameworks", technologies: ["Angular", ".NET Core", ".Net", "ReactJS", "Bootstrap"] },
+  { category: "Web Technologies", technologies: ["HTML/HTML5", "CSS3", "jQuery", "EJS", "Node.js", "JSON"] }
 ];
 
-var skillsSection = document.getElementById('skills');
-var skillsList = skillsSection.querySelector('ul');
-skillsList.setAttribute('id', 'skillsList');
+// Select the container where skills will be injected
+var skillsContainer = document.querySelector('.skills-container');
 
-for (var i = 0; i < skills.length; i++) {
+// Iterate over the skills array and create elements for each category and technology
+skills.forEach(function(skill) {
+  var categoryDiv = document.createElement('div');
+  categoryDiv.className = 'skill-category';
 
-  var categoryItem = document.createElement('li');
-  categoryItem.className = 'group';
-  categoryItem.innerText = skills[i].category;
+  var categoryHeading = document.createElement('h3');
+  categoryHeading.innerText = skill.category;
+  categoryDiv.appendChild(categoryHeading);
 
   var techList = document.createElement('ul');
-  
-  for (var j = 0; j < skills[i].technologies.length; j++) {
+  skill.technologies.forEach(function(technology) {
     var techItem = document.createElement('li');
     techItem.className = 'skills-item';
-    techItem.innerText = skills[i].technologies[j];
+    techItem.innerText = technology;
     techList.appendChild(techItem);
-  }
+  });
 
-categoryItem.appendChild(techList);
+  categoryDiv.appendChild(techList);
+  skillsContainer.appendChild(categoryDiv);
+});
 
-skillsList.appendChild(categoryItem);
-}
 
 /*-----------Nav------------------------*/
 function myFunction() {
@@ -102,3 +80,100 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+
+
+/*------------Projects----------------*/
+document.addEventListener('DOMContentLoaded', function() {
+  const username = 'Cherrymood'; // Replace with your GitHub username
+  const projectsContainer = document.querySelector('.projects-container');
+
+  // Define a list of repository names to skip
+  const skipRepos = ['chatbot', 'tiktaktoe', 'leetcode-Python', 'count-letter-frequency-', 'leetcode-']; // Add the names of the repositories you want to skip
+
+  fetch(`https://api.github.com/users/${username}/repos`)
+      .then(response => response.json())
+      .then(repos => {
+          repos.forEach(repo => {
+              // Check if the repository name is in the skip list
+              if (skipRepos.includes(repo.name)) {
+                  return; // Skip this repository
+              }
+              if(repo.name === 'cafe_game')
+              {
+                repo.name = 'Game "Cafe';
+              }
+              if(repo.name === 'valeriia-horodnycha')
+              {
+                repo.name = 'CTD IO project';
+              }
+
+              const repoCard = document.createElement('div');
+              repoCard.className = 'repo-card';
+
+              // Create repository link
+              const repoName = document.createElement('a');
+              repoName.href = repo.html_url;
+              repoName.target = '_blank';
+              repoName.textContent = repo.name;
+              repoName.className = 'repo-name';
+
+              // Create description paragraph
+              const repoDescription = document.createElement('p');
+              repoDescription.textContent = repo.description || 'No description available';
+              repoDescription.className = 'repo-description';
+
+              // Create created date
+              const repoDate = document.createElement('p');
+              repoDate.textContent = new Date(repo.created_at).toLocaleDateString();
+              repoDate.className = 'repo-date';
+
+              // Append elements to the card
+              repoCard.appendChild(repoName);
+              repoCard.appendChild(repoDescription);
+              repoCard.appendChild(repoDate);
+
+              // Append the card to the container
+              projectsContainer.appendChild(repoCard);
+          });
+      })
+      .catch(error => console.error('Error fetching repositories:', error));
+});
+
+/*-----------certifications---------*/
+// Array of certifications
+let certifications = [
+  { category: "SOLID Principles", url: "https://www.udemy.com/certificate/UC-0afe839c-6c7d-4bed-8119-187c6a19b930/", school: "Udemy", year: 2023 },
+  { category: "Foundational C# with Microsoft", url: "https://www.freecodecamp.org/certification/fcc41c73cb0-750b-4780-b261-f9274b26acde/foundational-c-sharp-with-microsoft", school: "freeCodeCamp", year: 2023 },
+  { category: "C# Advanced Topics", url: "https://www.udemy.com/certificate/UC-0de7762a-22e0-4430-b8b0-efdd50543e82/", school: "Udemy", year: 2023 },
+  { category: "C# Intermediate: Classes, Interfaces and OOP", url: "https://www.udemy.com/certificate/UC-ba843340-a407-4037-80a2-c7c7fab28671/", school: "Udemy", year: 2023 },
+  { category: "C# Basics for Beginners", url: "https://www.udemy.com/certificate/UC-3b4ea91a-274f-4b6b-84b2-4b4c9831afcd/", school: "Udemy", year: 2023 },
+  { category: "C# Basic", url: "https://www.hackerrank.com/certificates/55760e537b1c", school: "HackerRank", year: 2023 },
+  { category: "Master the Data Structures + Algorithms", url: "https://www.udemy.com/certificate/UC-40304951-16a0-4b4a-b141-2cdec0fd4b8c/", school: "Udemy", year: 2023 },
+  { category: "Recursion, Backtracking and Dynamic Programming", url: "https://www.udemy.com/certificate/UC-811c9c4e-c5da-4025-a851-18a20ab949ac/", school: "Udemy", year: 2024 },
+  { category: "API and Web Service Introduction", url: "https://www.udemy.com/certificate/UC-ba58f5dd-56f9-4182-98ed-d2d4497e86c9/", school: "Udemy", year: 2023 },
+  { category: "Python Bootcamp", url: "https://www.udemy.com/certificate/UC-ec7b80a9-7cd6-439f-a7f3-bfecb7cdd21f/", school: "Udemy", year: 2023 },
+];
+
+// Select the container where certifications will be injected
+let certificationsContainer = document.querySelector('.certifications-container');
+
+// Iterate over the certifications array and create elements for each certification
+certifications.forEach(function(certification) {
+  let certificationDiv = document.createElement('div');
+  certificationDiv.className = 'certification-item';
+
+  let certificationHeading = document.createElement('h3');
+  let certificationLink = document.createElement('a');
+  certificationLink.href = certification.url;
+  certificationLink.target = '_blank';
+  certificationLink.innerText = certification.category;
+  certificationHeading.appendChild(certificationLink);
+
+  let certificationDetails = document.createElement('p');
+  certificationDetails.innerText = `${certification.school}, ${certification.year}`;
+
+  certificationDiv.appendChild(certificationHeading);
+  certificationDiv.appendChild(certificationDetails);
+  certificationsContainer.appendChild(certificationDiv);
+});
+
