@@ -147,14 +147,11 @@ let certifications = [
   { category: "C# Advanced Topics", url: "https://www.udemy.com/certificate/UC-0de7762a-22e0-4430-b8b0-efdd50543e82/", school: "Udemy", year: 2023 },
   { category: "C# Intermediate: Classes, Interfaces and OOP", url: "https://www.udemy.com/certificate/UC-ba843340-a407-4037-80a2-c7c7fab28671/", school: "Udemy", year: 2023 },
   { category: "C# Basics for Beginners", url: "https://www.udemy.com/certificate/UC-3b4ea91a-274f-4b6b-84b2-4b4c9831afcd/", school: "Udemy", year: 2023 },
-  { category: "C# for Beginners and Intermediate", url: "N/A", school: "SoloLearn", year: 2023 },
   { category: "C# Basic", url: "https://www.hackerrank.com/certificates/55760e537b1c", school: "HackerRank", year: 2023 },
   { category: "Master the Data Structures + Algorithms", url: "https://www.udemy.com/certificate/UC-40304951-16a0-4b4a-b141-2cdec0fd4b8c/", school: "Udemy", year: 2023 },
   { category: "Recursion, Backtracking and Dynamic Programming", url: "https://www.udemy.com/certificate/UC-811c9c4e-c5da-4025-a851-18a20ab949ac/", school: "Udemy", year: 2024 },
-  { category: "SQL", url: "https://www.sololearn.com/Certificate/CT-SG6PCNAU/png", school: "SoloLearn", year: 2023 },
   { category: "API and Web Service Introduction", url: "https://www.udemy.com/certificate/UC-ba58f5dd-56f9-4182-98ed-d2d4497e86c9/", school: "Udemy", year: 2023 },
   { category: "Python Bootcamp", url: "https://www.udemy.com/certificate/UC-ec7b80a9-7cd6-439f-a7f3-bfecb7cdd21f/", school: "Udemy", year: 2023 },
-  { category: "Python for Beginners, Core, Data Structures", url: "N/A", school: "SoloLearn", year: 2022 }
 ];
 
 // Select the container where certifications will be injected
