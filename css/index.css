@@ -176,7 +176,7 @@ a:any-link:hover {
   margin-bottom: 5px;
 }
 
-#about, #experience, #certifications, #projects, #skills {
+#about, #experience, #certifications, #projects, #skills, #message{
   list-style: none;
   width: 60%;
   background-color: #ffffff4e;
@@ -345,4 +345,81 @@ a:any-link:hover {
 
 .social-media .social-icons:hover {
   transform: rotate(20deg) scale(1.2); 
+}
+
+/*-------------Message------------------*/
+
+.contact-form-container {
+  background-color: #ffffff4e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 60%;
+  margin-left: 10px;
+
+  text-align: justify;
+}
+
+.contact-form-container h2 {
+  margin-top: 0;
+  font-size: 2em;
+  font-weight: 700;
+  color: #BB9AB1;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  display: none;
+}
+
+.submit-button {
+  background-color: #BB9AB1;
+  color: #EEEDEB;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #987D9A;
+}
+
+.submit-button:active {
+  background-color: #218838;
 }

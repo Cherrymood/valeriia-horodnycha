@@ -71,7 +71,7 @@ skills.forEach(function(skill) {
 });
 
 
-/*-----------Nav------------------------*/
+/*-----------Nav Mobile------------------------*/
 function myFunction() {
   let x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -80,7 +80,6 @@ function myFunction() {
     x.style.display = "block";
   }
 }
-
 
 /*------------Projects----------------*/
 document.addEventListener('DOMContentLoaded', function() {

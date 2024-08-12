@@ -93,6 +93,33 @@
 
   </section>
 
+  <section id="message">
+
+    <h2><img src="./pictures/leave.png" height="30"> Leave Message</h2>
+
+      <form name="leave_message">
+        <div class="form-group">
+          <label for="usersName">Your name:</label>
+          <input type="text" id="usersName" name="usersName" required>
+          <span class="error-message" id="nameError">Please enter your name</span>
+        </div>
+
+        <div class="form-group">
+          <label for="usersEmail">Email:</label>
+          <input type="email" id="usersEmail" name="usersEmail" required>
+          <span class="error-message" id="emailError">Please enter a valid email</span>
+        </div>
+
+        <div class="form-group">
+          <label for="usersMessage">Message:</label>
+          <textarea name="usersMessage" id="usersMessage" required></textarea>
+          <span class="error-message" id="messageError">Please enter your message</span>
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+  </section>
+
   <footer id="footer">
   </footer>
 
