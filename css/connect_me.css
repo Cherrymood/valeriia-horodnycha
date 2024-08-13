@@ -1,3 +1,175 @@
+/*-------------Global Styles------------------*/
+body {
+  background-color: #EEEDEB;
+  color: #333; 
+  font-family: 'Lato', serif;
+}
+
+/*-------------Nav-Bar------------------*/
+.menu {
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2000;
+  background-color: #EEEDEB; /* Ensure the background covers the menu area */
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menu li a {
+  display: block;
+  color: #BB9AB1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #987D9A;
+  color: #EEEDEB;
+}
+
+.menu .icon {
+  display: none;
+  color: #BB9AB1;
+  font-size: 24px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/*-------------Home Page------------------*/
+#photo {
+  margin-top: 10px;
+  padding-top: 30px;
+}
+
+#icons {
+  vertical-align: middle; 
+  margin-right: 8px; 
+  margin-left: 8px;
+  margin-bottom: 8px;
+  width: 30px; 
+  height: auto; 
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #BB9AB1;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #BB9AB1;
+  background-color: #f9f9f9;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+a:any-link {
+  color: #BB9AB1;
+  text-decoration-line: none;
+}
+
+a:any-link:hover {
+  text-decoration-line: underline;
+  color: #987D9A; }
+
+.name {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+.profile-pic {
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-top: 60px;
+}
+
+/*-------------Footer------------------*/
+#footer {
+  color: #BB9AB1;
+  padding: 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 10px 20px; 
+  gap: 50px;
+  flex-wrap: wrap; 
+}
+
+.social-media {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.social-media li {
+  margin: 0 15px;
+}
+
+.social-media a {
+  color: #BB9AB1;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #987D9A; 
+  transform: rotate(360deg) scale(1.5); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.social-media .social-icons {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.social-media .social-icons:hover {
+  transform: rotate(20deg) scale(1.2); 
+}
+
+#footer-contact {
+  color: #BB9AB1;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #EEEDEB; 
+  text-align: center; 
+}
+
 /*-------------Connect Form------------------*/
 .contact-form-container {
   background-color: #ffffff4e;
@@ -6,17 +178,18 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 600px;
   width: 100%;
-  margin: 20px auto;
+  margin: 180px auto;
 }
 
 .contact-form-container h2 {
   margin-top: 0;
   color: #333;
   text-align: center;
+  font-size: 1.8rem;
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem; 
 }
 
 label {
@@ -33,10 +206,8 @@ input, textarea {
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 1rem;
-}
-
-textarea {
-  resize: vertical;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
 .error-message {
@@ -54,18 +225,18 @@ textarea {
   font-size: 1rem;
   cursor: pointer;
   width: 100%;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-  background-color: #218838;
+  background-color: #865C79; 
 }
-/*-------------Footer------------------*/
-#footer-contact {
-    color: #BB9AB1;
-    padding: 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-  
+
+.submit-button:active {
+  background-color: #713D5D; 
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px; 
+}
