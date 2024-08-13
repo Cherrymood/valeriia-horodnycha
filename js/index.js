@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 /*-----------Skills---------*/
 
 // Array of skills with categories and technologies
-var skills = [
+let skills = [
   { category: "Programming Languages", technologies: ["C#", "Python", "JavaScript"] },
   { category: "Database", technologies: ["MySQL", "PostgreSQL"] },
   { category: "Frameworks", technologies: ["Angular", ".NET Core", ".Net", "ReactJS", "Bootstrap"] },
@@ -47,20 +47,20 @@ var skills = [
 ];
 
 // Select the container where skills will be injected
-var skillsContainer = document.querySelector('.skills-container');
+let skillsContainer = document.querySelector('.skills-container');
 
 // Iterate over the skills array and create elements for each category and technology
 skills.forEach(function(skill) {
-  var categoryDiv = document.createElement('div');
+  let categoryDiv = document.createElement('div');
   categoryDiv.className = 'skill-category';
 
-  var categoryHeading = document.createElement('h3');
+  let categoryHeading = document.createElement('h3');
   categoryHeading.innerText = skill.category;
   categoryDiv.appendChild(categoryHeading);
 
-  var techList = document.createElement('ul');
+  let techList = document.createElement('ul');
   skill.technologies.forEach(function(technology) {
-    var techItem = document.createElement('li');
+    let techItem = document.createElement('li');
     techItem.className = 'skills-item';
     techItem.innerText = technology;
     techList.appendChild(techItem);
@@ -71,7 +71,7 @@ skills.forEach(function(skill) {
 });
 
 
-/*-----------Nav------------------------*/
+/*-----------Nav Mobile------------------------*/
 function myFunction() {
   let x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -80,7 +80,6 @@ function myFunction() {
     x.style.display = "block";
   }
 }
-
 
 /*------------Projects----------------*/
 document.addEventListener('DOMContentLoaded', function() {
@@ -140,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /*-----------certifications---------*/
+
 // Array of certifications
 let certifications = [
   { category: "SOLID Principles", url: "https://www.udemy.com/certificate/UC-0afe839c-6c7d-4bed-8119-187c6a19b930/", school: "Udemy", year: 2023 },
@@ -176,3 +176,68 @@ certifications.forEach(function(certification) {
   certificationsContainer.appendChild(certificationDiv);
 });
 
+/*-----------messages---------*/
+
+
+let messageSection = document.getElementById('messages');
+let messageList = messageSection.querySelector('ul');
+messageList.className = 'ulMessage';
+
+function messagesVisibility() {
+    if (messageList.children.length === 0) {
+        messageSection.style.display = 'none';
+    } else {
+        messageSection.style.display = 'block';
+    }
+}
+
+messagesVisibility();
+
+const messageForm = document.getElementById('messageForm');
+messageForm.addEventListener('submit', function(event) {
+
+    event.preventDefault();
+
+    const userName = document.getElementById('usersName').value;
+    const userEmail = document.getElementById('usersEmail').value;
+    const userMessage = document.getElementById('usersMessage').value;
+
+    if (userName === '' || userEmail === '' || userMessage === '') {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    console.log('Form submitted!');
+    console.log('Name:', userName);
+    console.log('Email:', userEmail);
+    console.log('Message:', userMessage);
+
+    let messageSection = document.getElementById('messages');
+    let messageList = messageSection.querySelector('ul');
+    messageList.className = 'ulMessage';
+    let newMessage = document.createElement('li');
+    newMessage.className = 'message-li';
+
+    newMessage.innerHTML = `<a href="mailto:${userEmail}">${userName}</a> <span>${userMessage}</span>`;
+
+    let removeButton = document.createElement('button');
+    removeButton.className = 'removeBtn';
+    removeButton.innerHTML = "remove";
+    removeButton.setAttribute('type', 'button');
+    
+    removeButton.addEventListener('click', () => {
+
+      let entry = removeButton.parentNode;
+
+      entry.remove();
+      messagesVisibility();
+
+    });
+
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+
+    messagesVisibility();
+
+    messageForm.reset();
+});
