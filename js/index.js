@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // Array of skills with categories and technologies
 let skills = [
   { category: "Programming Languages", technologies: ["C#", "Python", "JavaScript"] },
-  { category: "Database", technologies: ["MySQL", "PostgreSQL"] },
-  { category: "Frameworks", technologies: ["Angular", ".NET Core", ".Net", "ReactJS", "Bootstrap"] },
+  { category: "Database", technologies: ["MySQL"] },
+  { category: "Frameworks", technologies: [".NET Core", "ReactJS", "Bootstrap"] },
   { category: "Web Technologies", technologies: ["HTML/HTML5", "CSS3", "jQuery", "EJS", "Node.js", "JSON"] }
 ];
 
