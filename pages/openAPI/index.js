@@ -15,14 +15,6 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.post("/", async (req, res) => {
-  try {
-    res.render("index.ejs");
-  } catch (error) {
-    console.log(error.response.data);
-    res.status(500);
-  }
-});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
