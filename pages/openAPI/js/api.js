@@ -57,8 +57,8 @@
     return rh(a)+rh(b)+rh(c)+rh(d);
 }
 
-   const publicKey = '5e0d9e41a28b77598bbf3cf127e7f1bb';
-   const privateKey = 'f3fdf1d223338e7b335388875bb5a115329a8ea2';
+   const publicKey = process.env.publicKey;
+   const privateKey = process.env.privateKey;
    const apiBaseURL = "https://gateway.marvel.com/v1/public";
    
    // Function to create the URL for the API request
