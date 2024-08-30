@@ -47,31 +47,16 @@ body {
 }
 
 /*-------------Home Page------------------*/
-#photo {
-  margin-top: 10px;
-  padding-top: 30px;
-}
-
-#icons {
-  vertical-align: middle; 
-  margin-right: 8px; 
-  margin-left: 8px;
-  margin-bottom: 8px;
-  width: 30px; 
-  height: auto; 
-}
-
 h1 {
   font-size: 2.5em;
   font-weight: 700;
-  color: #BB9AB1;
+  color: #f0f0f0;
 }
 
 h2 {
   font-size: 2em;
   font-weight: 700;
-  color: #BB9AB1;
-  background-color: #f9f9f9;
+  color: #ffffff;
 }
 
 h3 {

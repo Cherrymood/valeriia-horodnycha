@@ -13,49 +13,57 @@
 
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link rel="stylesheet" href="../../openAPI/public/styles/index.css">
-    <link rel="stylesheet" href="/css/media_q.css">
+    <link rel="stylesheet" href="/styles/index.css">
 </head>
 
 <body>
 
-  <header>
-    <nav class="menu">
-
-      <ul id="myLinks">
-
-        <li><a href="http://127.0.0.1:3000/home.html"><img src="../../../pictures/home.png" height="40" alt="home"></a></li>
-
-      </ul>
-      
-    </nav>
-
-  </header>
-
-  <h1>Who are you from Marvel Universe</h1>
-
+    <% if(typeof hero_Name !== 'undefined') { %>
+        
+        <h1><%= hero_Name %></h1>
+        
+    <% } else { %>
+        <h1>Who are you from Marvel Universe?</h1>
+    <% } %>
+    
     <section id="lisper-section">
 
         <div class="card">
 
-          <form id="marvelForm">
+        <% if(typeof hero_Name !== 'undefined' && typeof picture !== 'undefined') { %>
 
-              <div class="form-group">
+                <img class="hero_img" src="<%= picture %>" height="300" alt="your hero">
 
-                  <label for="name">Put your name</label>
+                <div class="button-container">
 
-                  <input type="text" id="usersName" name="name" placeholder="Your Name" required>
+                    <button id="btn-redirect" class="button-75">Try other name</button>
 
-                  <span class="error-message" id="nameError"></span>
-              </div>
+                </div>
 
-              <button type="submit" class="button-75">Get your hero name</button>
-
-          </form>
+                <script>
+                    document.getElementById('btn-redirect').addEventListener('click', function() {
+                        window.location.href = '/';
+                    });
+                </script>
         </div>
-    </section>
 
-    <script src="../js/api.js"></script>
+        <% } else { %>
+        <div class="card">
+
+                <form id="marvelForm" action="/marvelForm" method="post">
+
+                    <div class="form-group">
+                        <label for="name">Put your name</label>
+                        <input type="text" id="usersName" name="usersName" placeholder="Your Name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <button type="submit" class="button-75">Get your hero name</button>
+
+                </form>
+        </div>
+        <% } %>
+    </section>
 </body>
 
 </html>
