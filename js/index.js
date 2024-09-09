@@ -1,3 +1,5 @@
+/*-----------Footer---------*/
+
 document.addEventListener("DOMContentLoaded", function() {
   let today = new Date();
   let thisYear = today.getFullYear();
