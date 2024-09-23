@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const projectsContainer = document.querySelector('.projects-container');
 
   // Define a list of repository names to skip
-  const skipRepos = ['chatbot', 'tiktaktoe', 'leetcode-Python', 'count-letter-frequency-', 'leetcode-']; // Add the names of the repositories you want to skip
+  const skipRepos = ['chatbot', 'tiktaktoe', 'leetcode-Python', 'count-letter-frequency-', 'leetcode-', 'Valeriia-debugging']; // Add the names of the repositories you want to skip
 
   fetch(`https://api.github.com/users/${username}/repos`)
       .then(response => response.json())
