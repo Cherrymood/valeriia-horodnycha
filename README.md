@@ -31,7 +31,7 @@ This project includes:
 - `index.html`: Main HTML file with embedded JavaScript and EmailJS configuration.
 - `connect_me.css`: CSS file for styling the contact form and other elements.
 - `media_q.css`: CSS file for responsive design.
-- `js/index.js`: JavaScript file for handling form submission and interaction.
+- `index.js`: JavaScript file for handling form submission and interaction.
 
 ### EmailJS Integration
 
