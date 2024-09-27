@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   let copyright = document.createElement('p');
   copyright.className = 'copyright';
-  copyright.innerHTML = `©${thisYear} Valeriia`;
+  copyright.innerHTML = `©${thisYear}`;
 
   let socialMediaList = document.createElement('ul');
   socialMediaList.className = 'social-media';
