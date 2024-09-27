@@ -101,12 +101,16 @@ document.addEventListener('DOMContentLoaded', function() {
               }
               if(repo.name === 'cafe_game')
               {
-                repo.name = 'Game "Cafe';
+                repo.name = 'Game "Cafe"';
               }
               if(repo.name === 'valeriia-horodnycha')
               {
                 repo.name = 'CTD IO project';
               }
+              if(repo.name === 'Cherrymood.github.io')
+                {
+                  repo.name = 'Marvel API';
+                }
 
               const repoCard = document.createElement('div');
               repoCard.className = 'repo-card';
@@ -144,6 +148,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Array of certifications
 let certifications = [
+  { category: "The Complete 2024 Web Development Bootcamp", url: "https://www.udemy.com/certificate/UC-930fb34d-0c1d-48d5-babf-d146e8f68ea1/", school: "Udemy", year: 2024},
+  { category: "Recursion, Backtracking and Dynamic Programming", url: "https://www.udemy.com/certificate/UC-811c9c4e-c5da-4025-a851-18a20ab949ac/", school: "Udemy", year: 2024 },
   { category: "SOLID Principles", url: "https://www.udemy.com/certificate/UC-0afe839c-6c7d-4bed-8119-187c6a19b930/", school: "Udemy", year: 2023 },
   { category: "Foundational C# with Microsoft", url: "https://www.freecodecamp.org/certification/fcc41c73cb0-750b-4780-b261-f9274b26acde/foundational-c-sharp-with-microsoft", school: "freeCodeCamp", year: 2023 },
   { category: "C# Advanced Topics", url: "https://www.udemy.com/certificate/UC-0de7762a-22e0-4430-b8b0-efdd50543e82/", school: "Udemy", year: 2023 },
@@ -151,7 +157,6 @@ let certifications = [
   { category: "C# Basics for Beginners", url: "https://www.udemy.com/certificate/UC-3b4ea91a-274f-4b6b-84b2-4b4c9831afcd/", school: "Udemy", year: 2023 },
   { category: "C# Basic", url: "https://www.hackerrank.com/certificates/55760e537b1c", school: "HackerRank", year: 2023 },
   { category: "Master the Data Structures + Algorithms", url: "https://www.udemy.com/certificate/UC-40304951-16a0-4b4a-b141-2cdec0fd4b8c/", school: "Udemy", year: 2023 },
-  { category: "Recursion, Backtracking and Dynamic Programming", url: "https://www.udemy.com/certificate/UC-811c9c4e-c5da-4025-a851-18a20ab949ac/", school: "Udemy", year: 2024 },
   { category: "Python Bootcamp", url: "https://www.udemy.com/certificate/UC-ec7b80a9-7cd6-439f-a7f3-bfecb7cdd21f/", school: "Udemy", year: 2023 },
 ];
 
